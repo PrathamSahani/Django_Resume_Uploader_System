@@ -10,31 +10,40 @@
 
     <title>Candidate</title>
 </head>
+<style>
+    .gfg {
+        color: #008000;     
+    }
+</style>
 
 <body>
     <div class="container">
         <h1 class="alert alert-danger text-center mt-4">Candidate Details</h1>
         <div class="row">
             <div class="col-sm-8 offset-sm-2 shadow p-5">
+                <h2 class=" alert alert-primary text-center gfg">GeeksforGeeks</h2>
                 <h3 class="text-center mb-4"><u>Resume</u></h3>
                 <div class="row">
                     <div class="col-sm-4 text-center">
-                        <img src="{{ candidate.profile_image.url }}" alt="" class="img-fluid img-thumbnail" width="150" height="150">
+                        <img src="{{ candidate.profile_image.url }}" alt="" class="img-fluid img-thumbnail" width="150"
+                            height="150">
                     </div>
                     <div class="col-sm-8">
                         <p><strong>Name:</strong> {{ candidate.name }}</p>
                         <p><strong>Date of Birth:</strong> {{ candidate.dob }}</p>
                         <p><strong>Gender:</strong> {{ candidate.gender }}</p>
-                        <p><strong>Address:</strong> {{ candidate.locality }}, {{ candidate.city }}, {{ candidate.state }}-{{ candidate.pin }}</p>
+                        <p><strong>Address:</strong> {{ candidate.locality }}, {{ candidate.city }}, {{ candidate.state
+                            }}-{{ candidate.pin }}</p>
                         <p><strong>Mobile No:</strong> {{ candidate.mobile }}</p>
                         <p><strong>Email ID:</strong> {{ candidate.email }}</p>
                         <p><strong>Preferred Job Cities:</strong> {{ candidate.job_city|remove_special:"[]'"}}</p>
-                        <p><strong>Attachment:</strong> <a href="{{ candidate.my_file.url }}" target="_blank">Download</a></p>
+                        <p><strong>Attachment:</strong> <a href="{{ candidate.my_file.url }}"
+                                target="_blank">Download</a></p>
                         <div class="">
                             <a href="/" class="btn btn-danger">Back to Home</a>
                         </div>
                     </div>
-                
+
                 </div>
             </div>
         </div>

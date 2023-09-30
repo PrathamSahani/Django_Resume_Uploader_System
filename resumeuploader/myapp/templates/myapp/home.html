@@ -13,11 +13,18 @@
     <!-- Custom CSS (assuming style.css is in the 'myapp' static directory) -->
     <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
 </head>
+<style>
+    .gfg{
+        color: #008000;
+    }
+</style>
 
 <body>
 
     <div class="container mb-5">
+      
         <h1 class="alert alert-danger text-center p-3">Resume Uploader</h1>
+        <h2 class=" alert alert-primary text-center gfg">GeeksforGeeks</h2>
         <div class="row">
             <div class="col-sm-8">
                 <form action="" method="post" enctype="multipart/form-data" class="shadow p-5">
